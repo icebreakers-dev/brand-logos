@@ -1,7 +1,7 @@
 # brand-logos
 Official Logo and Media Content
 <p align="center">
-  <img src="brand-logos/Icebreakers 2025 FOR SCREEN.png" alt="Icebreakers Logo" width="200"/>
+  <img src="/Icebreakers 2025 FOR SCREEN.png" alt="Icebreakers Logo" width="200"/>
 </p>
 
 # 🧊 Icebreakers Brand Logos
