@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>Icebreakers Logos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="Icebreakers 2025 FOR SCREEN.png">
+  <link rel="icon" href="IBTV Logo.png">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <style>
     body {
       background-color: #000000;
@@ -74,6 +75,59 @@
       background-color: #2ACFCF;
       color: #FFFFFF;
     }
+    .bg-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .bg-toggle button {
+      padding: 0.4rem 0.9rem;
+      border: 2px solid #40E0D0;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: bold;
+      background-color: transparent;
+      color: #40E0D0;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .bg-toggle button:hover,
+    .bg-toggle button.active {
+      background-color: #40E0D0;
+      color: #000000;
+    }
+    .logo-preview.bg-light {
+      background-color: #FFFFFF;
+    }
+    .logo-preview.bg-checkered {
+      background-image:
+        linear-gradient(45deg, #ccc 25%, transparent 25%),
+        linear-gradient(-45deg, #ccc 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #ccc 75%),
+        linear-gradient(-45deg, transparent 75%, #ccc 75%);
+      background-size: 16px 16px;
+      background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+      background-color: #fff;
+    }
+    .download-all-btn {
+      display: inline-block;
+      margin: 0 0.5rem 1.5rem;
+      padding: 0.85rem 2rem;
+      background-color: #FFFFFF;
+      color: #000000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+    .download-all-btn:hover {
+      background-color: #40E0D0;
+    }
     footer {
       font-size: 0.8rem;
       padding: 1rem;
@@ -104,55 +158,99 @@
   <header>
     <img src="Icebreakers 2025 FOR SCREEN.png" alt="Icebreakers Logo">
     <h1>Icebreakers Brand Logos</h1>
-    <p>Official logos for digital and print use</p>
+    <p>Official Icebreakers logos for digital and print use only.</p>
   </header>
 
   <main>
+    <div class="bg-toggle">
+      <button class="active" onclick="setBg('dark', this)">Dark</button>
+      <button onclick="setBg('light', this)">Light</button>
+      <button onclick="setBg('checkered', this)">Checkered</button>
+    </div>
+
+    <button class="download-all-btn" onclick="downloadAll()">Download All Logos</button>
+
     <section>
       <h2>PNG Logos</h2>
       <div class="logo-preview">
-        <img src="Icebreakers 2025 FOR SCREEN.png" alt="Icebreakers Sticker PNG Preview">
+        <img src="Icebreakers 2025 FOR SCREEN.png" alt="Icebreakers Sticker PNG Preview" loading="lazy">
       </div>
       <a class="download-btn" href="Icebreakers 2025 FOR SCREEN.png" download>Download PNG</a>
       <div class="logo-preview">
-        <img src="whiteicebreakersartesianspringwater.png.png" alt=" White Icebreakers Logo PNG Preview">
+        <img src="whiteicebreakersartesianspringwater.png.png" alt="White Icebreakers Logo PNG Preview" loading="lazy">
       </div>
       <a class="download-btn" href="whiteicebreakersartesianspringwater.png.png" download>Download PNG</a>
-       <div class="logo-preview">
-        <img src="True Black Black Icebreakers Vector with Artesian Spring Water.png" alt="Black Icebreakers Logo PNG Preview">
+      <div class="logo-preview">
+        <img src="True Black Black Icebreakers Vector with Artesian Spring Water.png" alt="Black Icebreakers Logo PNG Preview" loading="lazy">
       </div>
       <a class="download-btn" href="True Black Black Icebreakers Vector with Artesian Spring Water.png" download>Download PNG</a>
-        <div class="logo-preview">
-        <img src="qrcode.png" alt="Icebreakers QR Code">
+      <div class="logo-preview">
+        <img src="qrcode.png" alt="Icebreakers QR Code" loading="lazy">
       </div>
       <a class="download-btn" href="qrcode.png" download>Download PNG</a>
-       <div class="logo-preview">
-        <img src="Icebreakers Foundation 1920x1080.png" alt="Icebreakers Foundation Logo">
+      <div class="logo-preview">
+        <img src="Icebreakers Foundation 1920x1080.png" alt="Icebreakers Foundation Logo" loading="lazy">
       </div>
       <a class="download-btn" href="Icebreakers Foundation 1920x1080.png" download>Download PNG</a>
       <div class="logo-preview">
-        <img src="Icebreakers Foundation QR Code.png" alt="Icebreakers Foundation QR Code">
+        <img src="Icebreakers Foundation QR Code.png" alt="Icebreakers Foundation QR Code" loading="lazy">
       </div>
       <a class="download-btn" href="Icebreakers Foundation QR Code.png" download>Download PNG</a>
-       <div class="logo-preview">
-        <img src="IBTV Logo.png" alt="Icebreakers TV">
+      <div class="logo-preview">
+        <img src="IBTV Logo.png" alt="Icebreakers TV" loading="lazy">
       </div>
       <a class="download-btn" href="IBTV Logo.png" download>Download PNG</a>
-      <!-- Add more PNG download links here with preview -->
-    </section>
-
-    <section>
-      <h2>JPG Logos</h2>
-      <div class="logo-preview">
-        <img src="logos/jpg/icebreakers-logo.jpg" alt="Icebreakers JPG Preview">
-      </div>
-      <a class="download-btn" href="logos/jpg/icebreakers-logo.jpg" download>Download JPG</a>
-      <!-- Add more JPG download links here with preview -->
     </section>
   </main>
 
+  <script>
+    const logos = [
+      "Icebreakers 2025 FOR SCREEN.png",
+      "whiteicebreakersartesianspringwater.png.png",
+      "True Black Black Icebreakers Vector with Artesian Spring Water.png",
+      "qrcode.png",
+      "Icebreakers Foundation 1920x1080.png",
+      "Icebreakers Foundation QR Code.png",
+      "IBTV Logo.png"
+    ];
+
+    function setBg(mode, btn) {
+      document.querySelectorAll('.logo-preview').forEach(el => {
+        el.classList.remove('bg-light', 'bg-checkered');
+        if (mode === 'light') el.classList.add('bg-light');
+        if (mode === 'checkered') el.classList.add('bg-checkered');
+      });
+      document.querySelectorAll('.bg-toggle button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    async function downloadAll() {
+      const btn = document.querySelector('.download-all-btn');
+      btn.textContent = 'Preparing ZIP...';
+      btn.disabled = true;
+
+      const zip = new JSZip();
+      await Promise.all(logos.map(async name => {
+        const res = await fetch(name);
+        const blob = await res.blob();
+        zip.file(name, blob);
+      }));
+
+      const content = await zip.generateAsync({ type: 'blob' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(content);
+      a.download = 'Icebreakers-Logos.zip';
+      a.click();
+      URL.revokeObjectURL(a.href);
+
+      btn.textContent = 'Download All Logos';
+      btn.disabled = false;
+    }
+  </script>
+
   <footer>
-    &copy; 2025 Icebreakers Water. All rights reserved.
+    &copy; 2025 Icebreakers Water. All rights reserved.<br>
+    <a href="https://www.icebreakerswater.com" target="_blank" style="color: #40E0D0; font-size: 0.75rem; text-decoration: none;">www.icebreakerswater.com</a>
   </footer>
 </body>
 </html>
